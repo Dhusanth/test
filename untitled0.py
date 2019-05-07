@@ -29,9 +29,7 @@ for item in Report: #use for loop to print data in the Hardware List
         report.append(SaleAmount)   
         return report  
 
-import json
-import pandas as pd
-file = 'Sample_matomo.json'
+
 
 
         
