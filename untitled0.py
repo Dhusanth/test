@@ -32,5 +32,27 @@ for item in Report: #use for loop to print data in the Hardware List
 import json
 import pandas as pd
 
+file = 'Sample_matomo.json'
+
+with open(file) as df_file:
+    data = json.load(df_file)
+    # print(data[0])
+
+    custom_variable_list = []
+    
+    for raw in data:
+        uuid = raw['visitorId']
+        custom_variables = raw['customVariables']
+        
+        for cv in custom_variables:
+            try:
+                #t = (uuid, cv['customVariableName1'], cv['customVariableValue1'])
+                t = (uuid)
+                custom_variable_list.append(t)            
+            except Exception as e:
+                pass
+                 
+    df = df = pd.DataFrame(custom_variable_list)
+
 
         
