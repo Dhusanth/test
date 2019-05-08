@@ -29,7 +29,8 @@ for item in Report: #use for loop to print data in the Hardware List
         report.append(SaleAmount)   
         return report  
 
-
+import numpy as np
+import json
 
 
         
